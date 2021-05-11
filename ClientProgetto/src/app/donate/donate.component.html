@@ -1,0 +1,465 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
+  </title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+  <!--Replace with your tailwind.css once created-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+  <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+  <style>
+    .gradient {
+      background: linear-gradient(90deg, #075E54 0%, #25D366 100%);
+    }
+
+    #rcorners1 {
+      border-radius: 25px;
+      background: #73AD21;
+      padding: 20px;
+      width: 200px;
+      height: 150px;
+    }
+
+    .donate-crypto-box {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 1em;
+      box-sizing: border-box;
+      user-select: none;
+      cursor: text;
+    }
+
+    .coin {
+      display: inline-block;
+      position: relative;
+      min-width: 3em;
+      min-height: 3em;
+      animation: spin 3s cubic-bezier(0.3, 2, 0.4, 0.8) infinite both;
+      transform-style: preserve-3d;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+
+      0%,
+      10% {
+        transform: rotate(-10deg) perspective(400px);
+      }
+
+      90%,
+      100% {
+        transform: rotate(-10deg) perspective(400px) rotateY(180deg);
+      }
+    }
+
+    .coin-face {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+    }
+
+    .coin-face:nth-child(1) {
+      transform: translateZ(-0.2em) rotateY(-180deg);
+    }
+
+    .coin-face:nth-child(2) {
+      transform: translateZ(-0.1em);
+    }
+
+    .coin-face:nth-child(4) {
+      transform: translateZ(0.1em);
+    }
+
+    .coin-face:nth-child(5) {
+      transform: translateZ(0.2em);
+    }
+
+    .coin-face svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .coin-address {
+      flex: 1;
+      font: 0.28em Arial, monospace;
+      text-align: center;
+      margin-left: 1em;
+      border-width: 0 0 2px;
+      border-color: rgba(0, 0, 0, .1);
+      transition: border-color 0.3s;
+      cursor: text;
+    }
+
+    .coin-address:hover {
+      transition-duration: 0.1s;
+    }
+
+    .btc {
+      max-width: 21em;
+    }
+
+    .btc .coin-face {
+      background: shade(#f90, 35%);
+    }
+
+    .btc .coin-face:nth-child(1),
+    .btc .coin-face:nth-child(5) {
+      background: #f90;
+    }
+
+    .btc .coin-address:hover,
+    .btc .coin-address:focus {
+      border-color: #f90;
+    }
+
+    .eth {
+      max-width: 23em;
+    }
+
+    .eth .coin-face {
+      background: shade(#6f7cba, 35%);
+    }
+
+    .eth .coin-face:nth-child(1),
+    .eth .coin-face:nth-child(5) {
+      background: #6f7cba;
+    }
+
+    .eth .coin-address:hover,
+    .eth .coin-address:focus {
+      border-color: #6f7cba;
+    }
+
+    .ltc {
+      max-width: 21em;
+    }
+
+    .ltc .coin-face {
+      background: shade(#b5b5b5, 35%);
+    }
+
+    .ltc .coin-face:nth-child(1),
+    .ltc .coin-face:nth-child(5) {
+      background: #b5b5b5;
+    }
+
+    .ltc .coin-address:hover,
+    .ltc .coin-address:focus {
+      border-color: #b5b5b5;
+    }
+
+    bodycoin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-size: 4vmin;
+    }
+
+    .donate-crypto-box:nth-child(1) .coin {
+      animation-delay: 0.2s;
+    }
+
+    .donate-crypto-box:nth-child(2) .coin {
+      animation-delay: 0.4s;
+    }
+
+    .donate-crypto-box:nth-child(3) .coin {
+      animation-delay: 0.6s;
+    }
+  </style>
+</head>
+
+<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <!--Nav-->
+  <nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div class="pl-4 flex items-center">
+        <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+          <!--Icon from: http://www.potlabicons.com/ -->
+          <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+            <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
+            <path class="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z " />
+          </svg>
+          RANDOMLY
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Sondaggio</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Servizio Clienti</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Chi siamo?</a>
+          </li>
+        </ul>
+        <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"><a href='donate.component.html'>
+            DONAZIONE
+          </a>
+        </button>
+      </div>
+    </div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+  </nav>
+  <!--Hero-->
+  <div class="pt-24">
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <!--Left Col-->
+      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <h1 class="my-4 text-5xl font-bold leading-tight">
+          Donazione in criptovalute per sostenere il team di sviluppo
+        </h1>
+
+
+      </div>
+      <!--Right Col-->
+      <div class="w-full md:w-3/5 py-6 text-center">
+      <label class="btc donate-crypto-box bodycoin">
+        <div class="coin">
+          <div class="coin-face">
+            <svg height="10" viewBox="0 0 32 32" width="10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.78 15.37c.51-.61.83-1.4.83-2.26 0-2.74-1.6-4.38-4.24-4.38V5.45c0-.12-.1-.22-.22-.22h-1.27c-.11 0-.2.1-.2.21v3.3h-1.7V5.44c0-.12-.1-.22-.22-.22H13.5c-.12 0-.2.1-.21.21v3.3H9.67c-.12 0-.21.09-.21.21v1.31c0 .12.1.22.21.22h.21c.94 0 1.7.79 1.7 1.75v7c0 .92-.68 1.67-1.55 1.75a.21.21 0 0 0-.18.16l-.33 1.32c-.01.06 0 .13.04.19.04.05.1.08.17.08h3.55v3.3c0 .1.1.2.2.2h1.28c.12 0 .21-.1.21-.22v-3.28h1.7v3.3c0 .1.1.2.21.2h1.27c.12 0 .22-.1.22-.22v-3.28h.85c2.65 0 4.24-1.64 4.24-4.37 0-1.28-.68-2.39-1.68-3zm-6.8-4.01h2.54c.94 0 1.7.78 1.7 1.75 0 .96-.76 1.75-1.7 1.75h-2.55v-3.5zm3.39 8.75h-3.4v-3.5h3.4c.93 0 1.7.78 1.7 1.75 0 .96-.77 1.75-1.7 1.75z" fill="#FFF"></path>
+            </svg>
+          </div>
+          <div class="coin-face"></div>
+          <div class="coin-face"></div>
+          <div class="coin-face"></div>
+          <div class="coin-face">
+            <svg height="10" viewBox="0 0 32 32" width="10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.78 15.37c.51-.61.83-1.4.83-2.26 0-2.74-1.6-4.38-4.24-4.38V5.45c0-.12-.1-.22-.22-.22h-1.27c-.11 0-.2.1-.2.21v3.3h-1.7V5.44c0-.12-.1-.22-.22-.22H13.5c-.12 0-.2.1-.21.21v3.3H9.67c-.12 0-.21.09-.21.21v1.31c0 .12.1.22.21.22h.21c.94 0 1.7.79 1.7 1.75v7c0 .92-.68 1.67-1.55 1.75a.21.21 0 0 0-.18.16l-.33 1.32c-.01.06 0 .13.04.19.04.05.1.08.17.08h3.55v3.3c0 .1.1.2.2.2h1.28c.12 0 .21-.1.21-.22v-3.28h1.7v3.3c0 .1.1.2.21.2h1.27c.12 0 .22-.1.22-.22v-3.28h.85c2.65 0 4.24-1.64 4.24-4.37 0-1.28-.68-2.39-1.68-3zm-6.8-4.01h2.54c.94 0 1.7.78 1.7 1.75 0 .96-.76 1.75-1.7 1.75h-2.55v-3.5zm3.39 8.75h-3.4v-3.5h3.4c.93 0 1.7.78 1.7 1.75 0 .96-.77 1.75-1.7 1.75z" fill="#FFF"></path>
+            </svg>
+          </div>
+        </div>
+        <input class="coin-address" onclick="this.select()" readonly="readonly" spellcheck="false" type="text" value="1AiVpq67iaUhbe33rZTps1Dci4epsgCkvG" />
+      </label><label class="eth donate-crypto-box">
+        <div class="coin">
+          <div class="coin-face">
+            <svg height="10" viewBox="0 0 32 32" width="10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.13 17.76c-.1-.15-.06-.2.09-.12l5.49 3.09c.15.08.4.08.56 0l5.58-3.08c.16-.08.2-.03.1.11L16.2 25.9c-.1.15-.28.15-.38 0l-5.7-8.13zm.04-2.03a.3.3 0 0 1-.13-.42l5.74-9.2c.1-.15.25-.15.34 0l5.77 9.19c.1.14.05.33-.12.41l-5.5 2.78a.73.73 0 0 1-.6 0l-5.5-2.76z" fill="#FFF"></path>
+            </svg>
+          </div>
+          <div class="coin-face"></div>
+          <div class="coin-face"></div>
+          <div class="coin-face"></div>
+          <div class="coin-face">
+            <svg height="8" viewBox="0 0 32 32" width="8" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.13 17.76c-.1-.15-.06-.2.09-.12l5.49 3.09c.15.08.4.08.56 0l5.58-3.08c.16-.08.2-.03.1.11L16.2 25.9c-.1.15-.28.15-.38 0l-5.7-8.13zm.04-2.03a.3.3 0 0 1-.13-.42l5.74-9.2c.1-.15.25-.15.34 0l5.77 9.19c.1.14.05.33-.12.41l-5.5 2.78a.73.73 0 0 1-.6 0l-5.5-2.76z" fill="#fff"></path>
+            </svg>
+          </div>
+        </div>
+        <input class="coin-address" onclick="this.select()" readonly="readonly" spellcheck="false" type="text" value="0xed6F945c25350AD55781979B477567f18db94632" />
+      </label><label class="ltc donate-crypto-box">
+        <div class="coin">
+          <div class="coin-face">
+            <svg height="8" viewBox="0 0 38 38" width="8" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.29 28.04l1.29-5.52-1.58.67.63-2.85 1.64-.68L16.52 10h5.23l-1.52 7.14 2.09-.74-.58 2.7-2.05.8-.9 4.34h8.1l-.99 3.8z" fill="#fff"></path>
+            </svg>
+          </div>
+          <div class="coin-face"></div>
+          <div class="coin-face"></div>
+          <div class="coin-face"></div>
+          <div class="coin-face">
+            <svg height="8" viewBox="0 0 38 38" width="8" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.29 28.04l1.29-5.52-1.58.67.63-2.85 1.64-.68L16.52 10h5.23l-1.52 7.14 2.09-.74-.58 2.7-2.05.8-.9 4.34h8.1l-.99 3.8z" fill="#fff"></path>
+            </svg>
+          </div>
+        </div>
+        <input class="coin-address" onclick="this.select()" readonly="readonly" spellcheck="false" type="text" value="Le9YNyVezEqBDWQZ7CrXJXoBdjt5FMNFbv" />
+        </label>
+    </div>
+  </div>
+  </div>
+  <div class="relative -mt-12 lg:-mt-24">
+    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-2.000000, 44.000000)" fill="#DCE5FD" fill-rule="nonzero">
+          <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+          <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
+          <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+        </g>
+        <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!--Footer-->
+  <footer class="bg-white">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <div class="flex-1 mb-6 text-black">
+          <a class="text-green-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            <!--Icon from: http://www.potlabicons.com/ -->
+            <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+              <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
+              <path class="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z " />
+            </svg>
+            RANDOMLY
+          </a>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Company</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+  <script>
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
+    document.addEventListener("scroll", function() {
+      /*Apply classes for slide in bar*/
+      scrollpos = window.scrollY;
+      if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        navaction.classList.remove("bg-white");
+        navaction.classList.add("gradient");
+        navaction.classList.remove("text-gray-800");
+        navaction.classList.add("text-white");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-gray-800");
+          toToggle[i].classList.remove("text-white");
+        }
+        header.classList.add("shadow");
+        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.add("bg-white");
+      } else {
+        header.classList.remove("bg-white");
+        navaction.classList.remove("gradient");
+        navaction.classList.add("bg-white");
+        navaction.classList.remove("text-white");
+        navaction.classList.add("text-gray-800");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-white");
+          toToggle[i].classList.remove("text-gray-800");
+        }
+        header.classList.remove("shadow");
+        navcontent.classList.remove("bg-white");
+        navcontent.classList.add("bg-gray-100");
+      }
+    });
+  </script>
+  <script>
+    /*Toggle dropdown list*/
+    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+    var navMenuDiv = document.getElementById("nav-content");
+    var navMenu = document.getElementById("nav-toggle");
+    document.onclick = check;
+
+    function check(e) {
+      var target = (e && e.target) || (event && event.srcElement);
+      //Nav Menu
+      if (!checkParent(target, navMenuDiv)) {
+        // click NOT on the menu
+        if (checkParent(target, navMenu)) {
+          // click on the link
+          if (navMenuDiv.classList.contains("hidden")) {
+            navMenuDiv.classList.remove("hidden");
+          } else {
+            navMenuDiv.classList.add("hidden");
+          }
+        } else {
+          // click both outside link and outside menu, hide menu
+          navMenuDiv.classList.add("hidden");
+        }
+      }
+    }
+
+    function checkParent(t, elm) {
+      while (t.parentNode) {
+        if (t == elm) {
+          return true;
+        }
+        t = t.parentNode;
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>

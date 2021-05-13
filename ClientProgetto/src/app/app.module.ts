@@ -6,13 +6,18 @@ import { AppComponent } from './app.component';
 import { DonateComponent } from './donate/donate.component';
 import { SondaggioComponent } from './sondaggio/sondaggio.component';
 import { ServizioclientiComponent } from './servizioclienti/servizioclienti.component';
+import { RicercaComponent } from './ricerca/ricerca.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DonateComponent,
     SondaggioComponent,
-    ServizioclientiComponent
+    ServizioclientiComponent,
+    RicercaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

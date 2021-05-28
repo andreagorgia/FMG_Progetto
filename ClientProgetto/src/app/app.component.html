@@ -12,9 +12,17 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
 
+
+    <!--<script src="../assets/customJS/animations.js"></script>-->
+
     <style>
       .gradient {
         background: linear-gradient(90deg, #075E54 0%, #25D366 100%);
+      }
+
+      .gradient2 {
+       background: linear-gradient( rgb(255, 255, 255) , rgba(255, 255, 255, 0.767), rgba(255, 255, 255, 0));
+
       }
 
       #icon-finger-print #path1, #icon-finger-print #path2, #icon-finger-print #path3, #icon-finger-print #path4, #icon-finger-print #path5 {
@@ -80,11 +88,11 @@
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
 
     <!--Nav-->
-    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <nav #nav id="header" class="fixed w-full h-40 z-30 top-0 text-black gradient2" >
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="home/home.component.html">
-          <!-- LOGO IN ALTO A DESTRA-->
+          <a class="text-gray-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" routerLink="/home" routerLinkActive = 'active'>
+          <!-- LOGO IN ALTO A DESTRA
              <svg id="icon-finger-print" width="34px" height="34x" viewBox="0 0 34 34">
           <g transform="translate(7.000000, 6.000000)" stroke-linecap="round">
              <path id="path1" d="M3.14414922,1.97419264 C3.14414922,1.97419264 5.30885997,0.506351808 9.06036082,0.506351808 C12.8118617,0.506351808 14.781903,1.97419264 14.781903,1.97419264"></path>
@@ -95,6 +103,7 @@
           </g>
 
        </svg>
+       -->
 
             RANDOMLY
           </a>
@@ -124,7 +133,7 @@
           </ul>
           <button
             id="navAction"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           ><a routerLink="/donate" routerLinkActive = 'active'>
             DONAZIONE
             </a>
@@ -132,7 +141,7 @@
 
         </div>
       </div>
-      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+
     </nav>
 
 
@@ -157,6 +166,9 @@
               RANDOMLY
             </a>
           </div>
+
+
+
           <div class="flex-1">
             <p class="uppercase text-gray-500 md:mb-6">Links</p>
             <ul class="list-reset mb-6">
@@ -215,4 +227,6 @@
     </footer>
 
   </body>
+
+
 </html>

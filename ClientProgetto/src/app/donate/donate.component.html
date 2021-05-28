@@ -32,6 +32,7 @@
     }
 
     .coin {
+      margin-left: 2em;
       display: inline-block;
       position: relative;
       min-width: 3em;
@@ -85,10 +86,12 @@
     }
 
     .coin-address {
-      flex: 1;
-      font: 0.28em Arial, monospace;
-      text-align: center;
-      margin-left: 1em;
+      font: 9px Arial, italic;
+      color: rgb(153, 151, 151);
+      margin-left: 5em;
+      padding: 6px;
+      width: 100000px;
+      padding-left: 56px;
       border-width: 0 0 2px;
       border-color: rgba(0, 0, 0, .1);
       transition: border-color 0.3s;
@@ -181,17 +184,17 @@
 
   <!--Hero-->
   <div class="pt-24">
-    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <div class="ml-96 pl-27 w-full">
       <!--Left Col-->
-      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-        <h1 class="my-4 text-5xl font-bold leading-tight">
+      <div class="flex flex-col  md:w-2/5 justify-center items-start text-center md:text-left">
+        <h1 class="my-4 text-4xl font-bold leading-tight">
           Donazione in criptovalute per sostenere il team di sviluppo
         </h1>
 
 
       </div>
       <!--Right Col-->
-      <div class="w-full md:w-3/5 py-6 text-center">
+      <div class="flex flex-col w-full md:w-2/5 pr-24">
       <label class="btc donate-crypto-box bodycoin">
         <div class="coin">
           <div class="coin-face">
@@ -209,7 +212,8 @@
           </div>
         </div>
         <input class="coin-address" onclick="this.select()" readonly="readonly" spellcheck="false" type="text" value="1AiVpq67iaUhbe33rZTps1Dci4epsgCkvG" />
-      </label><label class="eth donate-crypto-box">
+      </label>
+      <label class="eth donate-crypto-box">
         <div class="coin">
           <div class="coin-face">
             <svg height="10" viewBox="0 0 32 32" width="10" xmlns="http://www.w3.org/2000/svg">
@@ -247,6 +251,10 @@
     </div>
   </div>
   </div>
+
+
+
+
   <div class="relative -mt-12 lg:-mt-24">
     <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

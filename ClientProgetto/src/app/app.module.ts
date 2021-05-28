@@ -9,6 +9,7 @@ import { ServizioclientiComponent } from './servizioclienti/servizioclienti.comp
 import { RicercaComponent } from './ricerca/ricerca.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ChisiamoComponent } from './chisiamo/chisiamo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     SondaggioComponent,
     ServizioclientiComponent,
     RicercaComponent,
-    HomeComponent
+    HomeComponent,
+    ChisiamoComponent
   ],
   imports: [
     BrowserModule,

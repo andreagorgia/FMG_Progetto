@@ -11,6 +11,9 @@ import {FormData} from './form.data.model';
   styleUrls: ['./servizioclienti.component.css']
 })
 export class ServizioclientiComponent implements OnInit {
+  title(title: any) {
+    throw new Error("Method not implemented.");
+  }
    messageList:  FormData[] = [];
   obs: Observable<Object>;
   chiave1:string;

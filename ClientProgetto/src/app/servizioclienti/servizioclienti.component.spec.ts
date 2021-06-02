@@ -1,25 +1,31 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed, async } from '@angular/core/testing';
 import { ServizioclientiComponent } from './servizioclienti.component';
 
 describe('ServizioclientiComponent', () => {
-  let component: ServizioclientiComponent;
-  let fixture: ComponentFixture<ServizioclientiComponent>;
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        ServizioclientiComponent
+      ],
+    }).compileComponents();
+  }));
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ServizioclientiComponent ]
-    })
-    .compileComponents();
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(ServizioclientiComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ServizioclientiComponent);
-    component = fixture.componentInstance;
+  it(`should have as title 'ClientProgetto'`, () => {
+    const fixture = TestBed.createComponent(ServizioclientiComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('ClientProgetto');
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(ServizioclientiComponent);
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.content span').textContent).toContain('ClientProgetto app is running!');
   });
 });

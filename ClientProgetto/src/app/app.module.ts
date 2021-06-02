@@ -10,6 +10,7 @@ import { RicercaComponent } from './ricerca/ricerca.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ChisiamoComponent } from './chisiamo/chisiamo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ChisiamoComponent } from './chisiamo/chisiamo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

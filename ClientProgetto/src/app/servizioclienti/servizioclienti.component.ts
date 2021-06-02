@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { CesarService } from './cesar.service';
 import { CryptoJsService } from './crypto.service';
 import {FormData} from './form.data.model';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-servizioclienti',

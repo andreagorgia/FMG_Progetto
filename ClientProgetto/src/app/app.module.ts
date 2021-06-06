@@ -11,6 +11,12 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ChisiamoComponent } from './chisiamo/chisiamo.component';
 import { FormsModule } from '@angular/forms';
+import { CesarService } from './servizioclienti/cesar.service';
+import { CryptoJsService } from './servizioclienti/crypto.service';
+import { SocketService } from './servizioclienti/socket.service';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'https://blush-cobra-iandoaja.ws-eu08.gitpod.io/', options: {/*transport : ['websocket'], withCredentials:false*/} };
 
 @NgModule({
   declarations: [
@@ -25,9 +31,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SocketIoModule.forRoot(config)
   ],
-  providers: [],
+  providers: [SocketService, CesarService,CryptoJsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

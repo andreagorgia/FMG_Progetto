@@ -19,17 +19,14 @@
   outline: 0 !important;
 }
 
-body {
-  padding: 2% 0;
-  background: rgb(55,64,74);
-background: linear-gradient(90deg, rgba(55,64,74,0.6811099439775911) 0%, rgba(55,64,74,1) 35%, rgba(55,64,74,0.7567401960784313) 100%);
-}
+
 
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 2.2em;
   font-weight: 700;
-  color: rgb(19, 221, 80);
+
+  color: rgb(3, 58, 240);
   text-transform: uppercase;
 }
 
@@ -52,12 +49,12 @@ a:hover {
 #survey-form .labels {
   display: block;
   margin-bottom: 2%;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 25%;
+  padding-right: 25%;
   font-family: "Roboto", sans-serif;
   font-size: 1.1em;
   font-weight: 300;
-  color: #FFF;
+  color: rgb(17, 17, 17);
   letter-spacing: 0.5px;
 }
 #survey-form input::-webkit-input-placeholder {
@@ -86,13 +83,13 @@ a:hover {
   background: transparent;
   border: none;
   outline: none;
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid rgb(0, 0, 0);
   font-size: 1.1em;
   font-weight: 300;
-  color: #85FFC7;
+  color: rgb(17, 154, 218);
 }
 #survey-form input:focus {
-  border-color: #85FFC7;
+  border-color: rgb(0, 118, 228);
 }
 #survey-form [type=checkbox],
 #survey-form [type=radio] {
@@ -116,7 +113,7 @@ a:hover {
   height: 23px;
   width: 23px;
   transition: all 0.15s ease-out 0s;
-  background: #37404a;
+  background: #5997df;
   color: #FFF;
   cursor: pointer;
   outline: none;
@@ -167,7 +164,7 @@ a:hover {
   padding-left: 5px;
   background-color: #37404a;
   border: 2px solid #FFF;
-  color: #85FFC7;
+  color: rgb(14, 159, 255);
 }
 #survey-form select option {
   padding: 5px 10px;
@@ -183,26 +180,28 @@ a:hover {
   padding: 10px 10px 0px 20px;
   width: 100%;
   height: 90px;
-  color: #85FFC7;
+  color: rgb(65, 203, 238);
   background-color: #37404a;
   border: 2px solid #FFF;
 }
 #survey-form .btn {
   display: inline-block;
-  position: relative;
-  width: 100%;
-  margin: 3% 0 0 0;
+  margin-left: 200px;
+  width: 50%;
+  margin: 3% 0 0 25%;
   height: 45px;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  border: 3px solid #85FFC7;
+  border: 3px solid #297fb996;
   border-radius: 0;
   font-weight: 500;
   font-size: 1.2em;
-  color: #85FFC7;
+
+  color: rgb(132, 134, 134);
   text-align: center;
-  background: none;
+
+  background: #6dd4faad;
   transition: color 0.25s ease;
 }
 #survey-form .btn:after {
@@ -227,26 +226,28 @@ a:hover {
   margin: 5% 0 0 0;
 }
 
-.copyright {
-  text-align: center;
-  font-size: 10px;
-  color: #FFF;
-}
-.copyright i {
-  color: #EF5350;
+.gradient{
+
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    padding: 8% 0;
-  }
+
+input{
+
+  color: #333;
+}
+
+.back{
+
+  background-color: #FFF;
 }
 
 
 </style>
   <div class="pt-24">
     </div>
-    <div class="relative -mt-12 lg:-mt-24">
+    <div class="relative -mt-12 lg:-mt-24 gradient">
       <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-2.000000, 44.000000)" fill="#DCE5FD" fill-rule="nonzero">
@@ -265,10 +266,10 @@ a:hover {
         </g>
       </svg>
     </div>
-    <section >
 
-      <div class="row">
-      <div class="col-xs-12  col-lg-6">
+
+
+      <div class="col-xs-12  col-lg-6 back pb-28">
          <div class="m-b-md text-center">
             <h1 id="title">Sondaggio su Randomly</h1>
             <p id="description" class="description" class="text-center">Condividi con gli sviluppatori il tuo parere sull'applicazione!</p>
@@ -384,12 +385,12 @@ a:hover {
                <textarea id="survey-form-suggestions" maxlength="194"></textarea>
                </label>
             </fieldset>
-            <button id="submit" type="submit" class="btn">INVIA IL SONDAGGIO</button>
+            <button id="submit" type="submit" class="btn object-center">INVIA IL SONDAGGIO</button>
          </form>
       </div>
-   </div>
 
-    </section>
+
+
 
     <!-- Change the colour #f8fafc to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

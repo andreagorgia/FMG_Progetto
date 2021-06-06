@@ -24,6 +24,13 @@
       background: linear-gradient(90deg, #25D366  0%,#075E54 100%);
     }
 
+
+    .divchat{
+
+      margin-left: 50px;
+
+    }
+
   </style>
 </head>
 
@@ -54,15 +61,15 @@
       <div></div>
     </div>
 
-    <section class="bg-white border-b py-8">
+    <section class="bg-white border-b py-8 text-black divchat">
 
-      <hr>
+
 
 <!--Questa form usa dei radio button con i template driven form di Angular per scegliere l'algoritmo di cifratura-->
 <form #myForm="ngForm" (submit)="sendMessage(myForm.value)" novalidate>
 
   <label>USERNAME:</label>
-    <input type="text" id="user"  [(ngModel)]="user" name="user">
+    <input type="text" id="user" class="text-black"  [(ngModel)]="user" name="user">
     <hr>
     <input type="text" id="message"  [(ngModel)]="message" name="message">
 

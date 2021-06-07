@@ -16,7 +16,7 @@ import { CryptoJsService } from './servizioclienti/crypto.service';
 import { SocketService } from './servizioclienti/socket.service';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
-const config: SocketIoConfig = { url: 'https://blush-cobra-iandoaja.ws-eu08.gitpod.io/', options: {/*transport : ['websocket'], withCredentials:false*/} };
+const config: SocketIoConfig = { url: 'https://randomlyrandom.herokuapp.com/', options: {/*transport : ['websocket'], withCredentials:false*/} };
 
 @NgModule({
   declarations: [
